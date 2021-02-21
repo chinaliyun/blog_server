@@ -119,7 +119,7 @@ export default {
     html() {
       return this.form.content.replace(
         /\.\/images\/((.*?)\.(png|jpg|gif|jpeg))/g,
-        `http://127.0.0.1:7001/static/blogs/${this.form.hash}/images/$1`
+        `/static/blogs/${this.form.hash}/images/$1`
       );
     },
     labelDictFilter() {

@@ -1,16 +1,16 @@
-import http from '@/utils/request';
+import http from "@/utils/request";
 
 export function selectLabelList(data) {
-  return http.get('http://127.0.0.1:7001/folders', data);
+  return http.get("/folders", data);
 }
 export function insertLabel(data) {
-  return http.post('http://127.0.0.1:7001/folders', data);
+  return http.post("/folders", data);
 }
 
 export function updateLabel(data) {
-  return http.post(`http://127.0.0.1:7001/folders/${data.id}`, data);
+  return http.post(`/folders/${data.id}`, data);
 }
 
 export function dropLabel(data) {
-  return http.delete(`http://127.0.0.1:7001/folders/${data.id}`);
+  return http.delete(`/folders/${data.id}`);
 }

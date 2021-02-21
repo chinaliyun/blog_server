@@ -1,24 +1,24 @@
-import http from '@/utils/request';
+import http from "@/utils/request";
 
 export function selectFolderList(data) {
-  return http.get('http://127.0.0.1:7001/folders', data);
+  return http.get("/folders", data);
 }
 
 export function selectLabelList(data) {
-  return http.get('http://127.0.0.1:7001/labels', data);
+  return http.get("/labels", data);
 }
 
 export function insertBlog(data) {
-  return http.post('http://127.0.0.1:7001/blogs', data);
+  return http.post("/blogs", data);
 }
 
 export function updateBlog(data) {
-  return http.post(`http://127.0.0.1:7001/blogs/${data.id}`, data);
+  return http.post(`/blogs/${data.id}`, data);
 }
 export function uploadFile(data) {
-  return http.post(`http://127.0.0.1:7001/upload`, data);
+  return http.post(`/upload`, data);
 }
 
 export function selectBlogOne(data) {
-  return http.get(`http://127.0.0.1:7001/blogs/${data.id}`, data);
+  return http.get(`/blogs/${data.id}`, data);
 }

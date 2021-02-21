@@ -1,16 +1,16 @@
-import http from '@/utils/request';
+import http from "@/utils/request";
 
 export function selectLabelList(data) {
-  return http.get('http://127.0.0.1:7001/labels', data);
+  return http.get("/labels", data);
 }
 export function insertLabel(data) {
-  return http.post('http://127.0.0.1:7001/labels', data);
+  return http.post("/labels", data);
 }
 
 export function updateLabel(data) {
-  return http.post(`http://127.0.0.1:7001/labels/${data.id}`, data);
+  return http.post(`/labels/${data.id}`, data);
 }
 
 export function dropLabel(data) {
-  return http.delete(`http://127.0.0.1:7001/labels/${data.id}`);
+  return http.delete(`/labels/${data.id}`);
 }
