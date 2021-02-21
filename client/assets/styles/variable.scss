@@ -1,0 +1,44 @@
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 0 4px rgba(56, 56, 56, 0.151);
+  margin-bottom: 10px;
+}
+.page_root {
+  padding-top: 10px;
+}
+$color-primary: #3fd16bc2;
+$color-text: #646464;
+$color-border: rgba(65, 65, 65, 0.26);
+a {
+  color: $color-text;
+}
+
+.input,
+.btn {
+  border: 1px solid lighten($color-border, 20%);
+  border-radius: 4px;
+  padding: 10px;
+  background-color: white;
+  &:focus {
+    outline: none;
+  }
+}
+.input {
+  &:focus {
+    // border-color: $color-primary;
+    outline: none;
+  }
+}
+.btn {
+  &:active {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+}

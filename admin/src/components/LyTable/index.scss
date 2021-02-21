@@ -1,0 +1,23 @@
+.ly_table {
+  // height: 135px;
+  // flex-grow: 1;
+  // display: flex;
+  // flex-direction: column;
+
+  /deep/ .el-table__row {
+    height: 37px;
+    overflow: hidden;
+  }
+  .table_section {
+    // flex-grow: 1;
+    // background-color: red;
+    // overflow: hidden;
+  }
+
+  .pagination_section {
+    padding-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    flex-shrink: 0;
+  }
+}
