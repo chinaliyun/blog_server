@@ -1,13 +1,19 @@
 'use strict';
-module.exports = (app) => {
+module.exports = app => {
   const { STRING, INTEGER, DATE } = app.Sequelize;
-  const Instance = app.model.define('concat_blog_labels', {
-    id: { type: INTEGER, primaryKey: true, autoIncrement: true },
-    blog_id: STRING(32),
-    label_id: STRING(32),
-    created_at: DATE,
-    updated_at: DATE,
-  });
+  const Instance = app.model.define(
+    'concat_blog_labels',
+    {
+      id: { type: INTEGER, primaryKey: true, autoIncrement: true },
+      blog_id: STRING(32),
+      label_id: STRING(32),
+      created_at: DATE,
+      updated_at: DATE,
+    },
+    {
+      timestamps: false,
+    }
+  );
   Instance.associate = function () {
     Instance.belongsTo(app.model.Blog, {
       foreignKey: 'blog_id',
